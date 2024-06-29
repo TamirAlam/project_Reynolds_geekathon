@@ -29,6 +29,7 @@ body {
   padding: 0;
   text-align: center;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .nav-links li {
@@ -79,10 +80,10 @@ form {
   top: -2px;
   cursor: pointer;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
+/* img { */
+  /* max-width: 100%; */
+  /* height: auto; */
+/* } */
 
 @media (max-width: 768px) {
   .image_content {
@@ -206,6 +207,10 @@ p {
   gap: 20px;
 }
 
+.card{
+  position: relative;
+}
+
 .card-1 {
   background-color: white;
   border-radius: 10px;
@@ -214,6 +219,7 @@ p {
   text-align: center;
   flex: 1 1 200px;
   max-width: 300px;
+  position: relative;
 }
 
 .card-1 img {
@@ -226,6 +232,12 @@ p {
   background-color: #0056b3;
   color: white;
   font-size: 1.2em;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+}
+.text2{
+  width: 88%;
 }
 
 @media (max-width: 600px) {
@@ -710,7 +722,7 @@ div{
 }
 
 .slide img {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin:0;
   padding:0;
@@ -953,8 +965,14 @@ div{
   display: flex;
   width: 1100px;
   justify-content: space-between;
-  margin-left:70px;
+  margin-left:110px;
+  margin-right:40px;
   
+}
+@media (max-width: 350px) {
+  .container-animation {
+      margin-left:3px;
+  }
 }
 .image-box {
   position: relative;
@@ -1027,6 +1045,7 @@ h2 {
   margin-top: 50px;
   position: absolute;
   bottom: 0;
+  color:#e0e0e0;
   /* bottom: 0; */
   /* color: #fff; */
 }
@@ -1053,10 +1072,143 @@ h2 {
 }
 
 
+/* slider-css */
+/*   */
+/* .slider-3 { */
+  /* width: 1190px; */
+  /* overflow: hidden; */
+/* } */
+/* .slider-3 .row { */
+  /* display: flex; */
+  /* width: calc(300px * 14); Total number of images times the image width */
+  /* animation: slide 30s linear infinite; */
+/* } */
+/* @keyframes slide { */
+  /* 0% { */
+      /* transform: translateX(0); */
+  /* } */
+  /* 10% { */
+      /* transform: translateX(0); */
+  /* } */
+  /* 20% { */
+      /* transform: translateX(-300px); */
+  /* } */
+  /* 30% { */
+      /* transform: translateX(-300px); */
+  /* } */
+  /* 40% { */
+      /* transform: translateX(-600px); */
+  /* } */
+  /* 50% { */
+      /* transform: translateX(-600px); */
+  /* } */
+  /* 60% { */
+      /* transform: translateX(-900px); */
+  /* } */
+  /* 70% { */
+      /* transform: translateX(-900px); */
+  /* } */
+  /* 80% { */
+      /* transform: translateX(-1200px); */
+  /* } */
+  /* 90% { */
+      /* transform: translateX(-1200px); */
+  /* } */
+  /* 100% { */
+      /* transform: translateX(-1500px); */
+  /* } */
+/* } */
+/* .slider-3 .column { */
+  /* min-width: 300px; */
+  /* height: 300px; */
+  /* padding: 7px; */
+/* } */
+/* .slider-3 .column img { */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* object-fit: cover; */
+/* } */
 
-
-
-
+.slider-3 {
+  width: 100%;
+  max-width: 1190px;
+  overflow: hidden;
+  margin-left:90px;
+}
+.slider-3 .row {
+  display: flex;
+  width: calc(300px * 14); /* Total number of images times the image width */
+  animation: slide 30s linear infinite;
+}
+@keyframes slide {
+  0%, 10% { transform: translateX(0); }
+  20%, 30% { transform: translateX(-300px); }
+  40%, 50% { transform: translateX(-600px); }
+  60%, 70% { transform: translateX(-900px); }
+  80%, 90% { transform: translateX(-1200px); }
+  100% { transform: translateX(-1500px); }
+}
+.slider-3 .column {
+  min-width: 300px;
+  height: 300px;
+  padding: 7px;
+}
+.slider-3 .column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .slider-3 .column {
+      min-width: 250px;
+      height: 250px;
+  }
+  .slider-3 .row {
+      width: calc(250px * 14);
+  }
+  @keyframes slide {
+      0%, 10% { transform: translateX(0); }
+      20%, 30% { transform: translateX(-250px); }
+      40%, 50% { transform: translateX(-500px); }
+      60%, 70% { transform: translateX(-750px); }
+      80%, 90% { transform: translateX(-1000px); }
+      100% { transform: translateX(-1250px); }
+  }
+}
+@media (max-width: 768px) {
+  .slider-3 .column {
+      min-width: 200px;
+      height: 200px;
+  }
+  .slider-3 .row {
+      width: calc(200px * 14);
+  }
+  @keyframes slide {
+      0%, 10% { transform: translateX(0); }
+      20%, 30% { transform: translateX(-200px); }
+      40%, 50% { transform: translateX(-400px); }
+      60%, 70% { transform: translateX(-600px); }
+      80%, 90% { transform: translateX(-800px); }
+      100% { transform: translateX(-1000px); }
+  }
+}
+@media (max-width: 480px) {
+  .slider-3 .column {
+      min-width: 150px;
+      height: 150px;
+  }
+  .slider-3 .row {
+      width: calc(150px * 14);
+  }
+  @keyframes slide {
+      0%, 10% { transform: translateX(0); }
+      20%, 30% { transform: translateX(-150px); }
+      40%, 50% { transform: translateX(-300px); }
+      60%, 70% { transform: translateX(-450px); }
+      80%, 90% { transform: translateX(-600px); }
+      100% { transform: translateX(-750px); }
+  }
+}
 
 
 
